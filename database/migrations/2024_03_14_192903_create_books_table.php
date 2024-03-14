@@ -16,11 +16,11 @@ class CreateBooksTable extends Migration
         Schema::create('books', function (Blueprint $table) {
             $table->id();
             $table->string('title', 180)->unique();
-            $table->text('description', 30);
-            $table->string('isbn', 60)->unique();
+            $table->text('description')->nullable();
+            $table->string('isbn', 60)->nullable();
             $table->string('publisher', 90);
             $table->enum('gender', ['ADVENTURE','FANTASY','FICTION','HORROR','MYSTERY','ROMANCE','TRAGEDY']);
-            $table->unsignedSmallInteger('year');
+            $table->unsignedSmallInteger('year')->nullable();
             $table->timestamps();
             $table->string('created_by');
             $table->string('updated_by')->nullable();
