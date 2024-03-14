@@ -19,7 +19,7 @@ class CreateBooksTable extends Migration
             $table->text('description')->nullable();
             $table->string('isbn', 60)->nullable();
             $table->string('publisher', 90);
-            $table->enum('gender', ['ADVENTURE','FANTASY','FICTION','HORROR','MYSTERY','ROMANCE','TRAGEDY']);
+            $table->enum('gender', ['ADVENTURE','FANTASY','FICTION','HORROR','MYSTERY','NOVEL','ROMANCE','TRAGEDY']);
             $table->unsignedSmallInteger('year')->nullable();
             $table->timestamps();
             $table->string('created_by');

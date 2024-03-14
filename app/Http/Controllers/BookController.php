@@ -38,7 +38,7 @@ class BookController extends Controller
             'title' => 'required|max:180|unique:books',
             'isbn' => 'max:60',
             'publisher' => 'required|max:90',
-            'gender' => 'required|in:ADVENTURE,FANTASY,FICTION,HORROR,MYSTERY,ROMANCE,TRAGEDY',
+            'gender' => 'required|in:ADVENTURE,FANTASY,FICTION,HORROR,MYSTERY,NOVEL,ROMANCE,TRAGEDY',
             'year' => 'integer|min:1600',
             'created_by' => 'required',
             'author_id' => 'required|integer|min:1'
@@ -56,7 +56,7 @@ class BookController extends Controller
             'title' => 'required|max:180|unique:books,title,' . $id,
             'isbn' => 'max:60',
             'publisher' => 'required|max:90',
-            'gender' => 'required|in:ADVENTURE,FANTASY,FICTION,HORROR,MYSTERY,ROMANCE,TRAGEDY',
+            'gender' => 'required|in:ADVENTURE,FANTASY,FICTION,HORROR,MYSTERY,NOVEL,ROMANCE,TRAGEDY',
             'year' => 'integer|min:1600',
             'updated_by' => 'required',
             'author_id' => 'required|integer|min:1'
@@ -77,7 +77,7 @@ class BookController extends Controller
             'title' => 'max:180|unique:books,title,' . $id,
             'isbn' => 'max:60',
             'publisher' => 'max:90',
-            'gender' => 'in:ADVENTURE,FANTASY,FICTION,HORROR,MYSTERY,ROMANCE,TRAGEDY',
+            'gender' => 'in:ADVENTURE,FANTASY,FICTION,HORROR,MYSTERY,NOVEL,ROMANCE,TRAGEDY',
             'year' => 'integer|min:1600',
             'author_id' => 'integer|min:1'
         ];
